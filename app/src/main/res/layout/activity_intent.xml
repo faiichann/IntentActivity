@@ -4,18 +4,198 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layout"
     tools:context=".IntentActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-86dp">
 
-    <TextView
-        android:id="@+id/textName"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:text="TextView"
-        android:textSize="24sp"
+        <GridLayout
+            android:id="@+id/gridIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="1dp"
+            android:numColumns="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.474"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+            <ImageButton
+
+                android:id="@+id/cameraBtn"
+                android:layout_width="121dp"
+                android:layout_height="99dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/camera"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+
+                android:id="@+id/dateBtn"
+                android:layout_width="121dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/date"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+
+                android:id="@+id/photoBtn"
+                android:layout_width="121dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/photo"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+
+                android:id="@+id/youtubeBtn"
+                android:layout_width="121dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/youtube"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+
+                android:id="@+id/mapBtn"
+                android:layout_width="121dp"
+                android:layout_height="100dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/map"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+
+                android:id="@+id/googleBtn"
+                android:layout_width="121dp"
+                android:layout_height="100dp"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/gg"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/cameraText"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text="@string/camera"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/photoText"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:text="@string/photo"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:text="@string/date"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/youtubeText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:text="@string/youtube"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:text="@string/map"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/ggText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:text="@string/gg"
+                android:textAlignment="center" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="173dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="129dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="109dp"
+            android:layout_marginBottom="597dp"
+            android:text="@string/titleIntent"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/next3Btn"
+        android:layout_width="69dp"
+        android:layout_height="34dp"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="67dp"
+        android:layout_height="35dp"
+        android:text="@string/main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next3Btn"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
 </android.support.constraint.ConstraintLayout>

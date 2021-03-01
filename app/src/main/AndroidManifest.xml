@@ -9,9 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TouchActivity"></activity>
-        <activity android:name=".IntentActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".TouchActivity">
+            <intent-filter>
+                <action android:name="com.example.midtermexam.TOUCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IntentActivity">
+            <intent-filter>
+                <action android:name="com.example.midtermexam.INTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="com.example.midtermexam.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
