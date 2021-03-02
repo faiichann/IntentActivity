@@ -117,12 +117,25 @@
         android:id="@+id/nextBtn"
         android:layout_width="75dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+<!--    <Button-->
+<!--        android:id="@+id/lastBtn"-->
+<!--        android:layout_width="75dp"-->
+<!--        android:layout_height="39dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="684dp"-->
+<!--        android:text="@string/last"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.02"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </android.support.constraint.ConstraintLayout>

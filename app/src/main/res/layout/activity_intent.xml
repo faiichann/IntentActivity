@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IntentActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-86dp">
+        tools:layout_editor_absoluteX="-86dp"
+        tools:context=".IntentActivity">
 
         <GridLayout
             android:id="@+id/gridIntent"
@@ -173,8 +175,19 @@
             android:textAlignment="center"
             android:textSize="24sp" />
 
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="67dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="332dp"
+            android:layout_marginBottom="684dp"
+            android:text="@string/main" />
+
     </RelativeLayout>
-    <Button
+
+        <Button
         android:id="@+id/next3Btn"
         android:layout_width="69dp"
         android:layout_height="34dp"
@@ -185,17 +198,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
-
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="67dp"
-        android:layout_height="35dp"
-        android:text="@string/main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next3Btn"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
 
 </android.support.constraint.ConstraintLayout>

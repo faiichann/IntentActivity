@@ -49,14 +49,44 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+//        backBtn = (Button) findViewById(R.id.backBtn);
+//        backBtn.setOnTouchListener(new View.OnTouchListener() {
+//            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener(){
+//                @Override
+//                public boolean onDoubleTap(MotionEvent e) {
+////                    Toast.makeText(getApplicationContext(),"Next Activity",Toast.LENGTH_SHORT).show();
+//                    Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
+//                    setResult(RESULT_OK,mainIntent );
+//                    //---close activity ---
+//                    finish();
+//                    return true;
+//                }
+//            });
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                gestureDetector.onTouchEvent(motionEvent);
+//                return false;
+//            }
+//        });
         next2Btn = (Button) findViewById(R.id.next2Btn);
         next2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent loginIntent =  new Intent("com.example.midtermexam.INTENT");
-                loginIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
-                startActivity(loginIntent);
+            public void onClick(View arg0)
+            {
+                Intent intent = new Intent(LoginActivity.this,IntentActivity.class);
+                startActivity(intent);
             }
+//            public void onClick(View view) {
+//                Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
+//                setResult(RESULT_OK,mainIntent );
+//                //---close activity ---
+//                finish();
+////                Intent loginIntent =  new Intent("com.example.midtermexam.INTENT");
+//////                loginIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+////                loginIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//////                loginIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+////                startActivity(loginIntent);
+//            }
         });
 //        next2Btn.setOnTouchListener(new View.OnTouchListener() {
 //            GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener(){

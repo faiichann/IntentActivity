@@ -35,13 +35,22 @@ public class TouchActivity extends AppCompatActivity implements View.OnClickList
         imageButton4.setOnClickListener(this);
 
         backBtn = (Button) findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setResult(RESULT_OK);
-                finish();
-            }
-        });
+        backBtn.setOnClickListener(this);
+//        backBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setResult(RESULT_OK);
+//                finish();
+//            }
+//        });
+//           backBtn.setOnClickListener(this);{
+//           @Override
+//           public void onClick(View arg0)
+//           {
+//               Intent intent = new Intent(TouchActivity.this,MainActivity.class);
+//               startActivity(intent);
+//           }
+//       });
 
         layout = (ConstraintLayout)findViewById(R.id.layout);
         layout.setOnTouchListener(new View.OnTouchListener() {
@@ -103,8 +112,8 @@ public class TouchActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
+    public void onClick(View arg0) {
+        switch (arg0.getId()){
             case R.id.imageButton1:
                 Toast.makeText(this,"Button 1 cilcked",Toast.LENGTH_SHORT).show();
                 break;
@@ -118,5 +127,7 @@ public class TouchActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this,"Button 4 cilcked",Toast.LENGTH_SHORT).show();
                 break;
         }
+        Intent intent = new Intent(TouchActivity.this,MainActivity.class);
+        startActivity(intent);
     }
 }

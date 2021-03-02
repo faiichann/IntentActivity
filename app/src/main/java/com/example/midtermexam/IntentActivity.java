@@ -3,8 +3,10 @@ package com.example.midtermexam;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -24,12 +26,13 @@ public class IntentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
 
-        next3Btn = (Button) findViewById(R.id.next2Btn);
+        next3Btn = (Button) findViewById(R.id.next3Btn);
         next3Btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent touchIntent = new Intent("com.example.midtermexam.TOUCH");
-                startActivityForResult(touchIntent, RESULT_CANCELED);
+            public void onClick(View arg0)
+            {
+                Intent touchintent = new Intent(IntentActivity.this,TouchActivity.class);
+                startActivity(touchintent);
             }
         });
         backBtn = (Button) findViewById(R.id.backBtn);
@@ -37,11 +40,13 @@ public class IntentActivity extends AppCompatActivity {
             GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener(){
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Toast.makeText(getApplicationContext(),"Next Activity",Toast.LENGTH_SHORT).show();
-                    Intent mainIntent = new Intent(IntentActivity.this,MainActivity.class);
-                    setResult(RESULT_OK,mainIntent );
-                    //---close activity ---
-                    finish();
+                    Toast.makeText(getApplicationContext(),"back Activity",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(IntentActivity.this,MainActivity.class);
+                    startActivity(intent);
+//                    Intent mainIntent = new Intent(IntentActivity.this,MainActivity.class);
+//                    setResult(RESULT_OK,mainIntent );
+//                    //---close activity ---
+//                    finish();
                     return true;
                 }
             });
@@ -119,12 +124,12 @@ public class IntentActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode== RESULT_CANCELED) {
-            setResult(resultCode);
-            finish();
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if(requestCode== RESULT_CANCELED) {
+//            setResult(resultCode);
+//            finish();
+//        }
+//    }
 }
